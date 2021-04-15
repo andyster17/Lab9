@@ -46,6 +46,7 @@ if __name__ == '__main__':
     print("finding newly inserted record")
     pprint.pprint(definitions.find_one({"_id":resultID}))
 ~~~
+NOTE: there's far too much output for finding and printing all records, if you want you can run the code yourself. 
 ![image](4.PNG)
 
 # Check 5 
