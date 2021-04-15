@@ -26,13 +26,6 @@ from pymongo import MongoClient
 import pprint
 client = MongoClient('localhost', 27017)
 
-"""Fetch all records
-Fetch one record
-Fetch a specific record
-Fetch a record by object id
-Insert a new record"""
-
-
 if __name__ == '__main__':
     db = client.mongo_db_lab
     definitions=db.definitions
@@ -83,15 +76,10 @@ def random_word_requester():
         definitions.find_one_and_update({"_id": randomWordID},{"$set": {"dates": [currTime] }})
     #definitions.update_one({"_id": str(randomWordID)},{"$push": randomWord})
     return definitions.find_one({"_id": randomWordID})
-    '''
-    This function should return a random word and its definition and also
-    log in the MongoDB database the timestamp that it was accessed.
-    '''
-    return
 
 
 if __name__ == '__main__':
     pprint.pprint(random_word_requester())
 '''
 ![image](5.2.PNG)
-![image(5.PNG)
+![image](5.PNG)
