@@ -21,7 +21,8 @@ Git clone comparison, the green test was my altered change and the red text was 
 ![image](3.3.PNG) 
 
 # Check 4
-'''
+~~~
+
 from pymongo import MongoClient
 import pprint
 client = MongoClient('localhost', 27017)
@@ -44,12 +45,12 @@ if __name__ == '__main__':
     print("==== FINDING A RECORD BY OBJECT ID =====")
     print("finding newly inserted record")
     pprint.pprint(definitions.find_one({"_id":resultID}))
-'''
+~~~
 ![image](4.PNG)
 
 # Check 5 
 
-''' 
+~~~
 from pymongo import MongoClient
 import pprint
 import datetime
@@ -80,6 +81,6 @@ def random_word_requester():
 
 if __name__ == '__main__':
     pprint.pprint(random_word_requester())
-'''
+~~~
 ![image](5.2.PNG)
 ![image](5.PNG)
